@@ -7,17 +7,33 @@
 // информации о юзере было указано
 // "Нет данных"
 
-function formattedUserData() {
-    return `
+function formattedUserData(
+  firstName: string,
+  lastName: string,
+  age: number,
+  hometown: string
+): string {
+  return `
       Имя: ${firstName};
       Фамилия: ${lastName};
       Возраст: ${age};
       Родной город: ${hometown};
     `;
-  }
-  
-  // 2. Ниже перепишите функцию formattedUserData2 таким
-  // образом чтобы данные выводились в консоль
-  
-  function formattedUserData2() {}
-  
+}
+
+// 2. Ниже перепишите функцию formattedUserData2 таким
+// образом чтобы данные выводились в консоль
+
+function formattedUserData2(
+  firstName: string,
+  lastName: string,
+  age: number,
+  hometown: string
+) {
+  console.log(`
+  Имя: ${firstName};
+  Фамилия: ${lastName};
+  Возраст: ${age};
+  Родной город: ${hometown};
+`);
+}
