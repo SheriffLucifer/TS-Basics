@@ -2,22 +2,26 @@
 // 2. Замени все unknown описанным типом
 // 3. Проверь работоспособность кода
 
-export type User = unknown;
+export interface User {
+  name: string;
+  age: number;
+  occupation: string;
+}
 
-export const users: unknown[] = [
+export const users: User[] = [
   {
     name: "Антон",
     age: 25,
-    occupation: "Водитель"
+    occupation: "Водитель",
   },
   {
     name: "Амир",
     age: 23,
-    occupation: "Программист"
-  }
+    occupation: "Программист",
+  },
 ];
 
-export function logPerson(user: unknown) {
+export function logPerson(user: User) {
   console.log(` - ${user.name}, ${user.age}`);
 }
 
