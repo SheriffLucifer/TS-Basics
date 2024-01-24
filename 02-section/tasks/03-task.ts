@@ -1,6 +1,6 @@
-let tasks;
-let month;
-let results;
+let tasks: string | string[];
+let month: number | string;
+let results: any;
 
 // Определите в явном виде тип переменных таким образом,
 // чтобы код ниже работал корректно
