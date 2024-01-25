@@ -2,7 +2,10 @@
 // ее дженерик таким образом чтобы код не вызывал
 // ошибок.
 
-function getLength<T>(arg: T): number {
-    return arg.length;
-  }
-  
+interface Lengthwise {
+  length: number;
+}
+
+function getLength<T extends Lengthwise>(arg: T): number {
+  return arg.length;
+}
