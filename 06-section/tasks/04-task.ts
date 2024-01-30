@@ -1,4 +1,4 @@
-function getPropertyValue<T extends Record<string, any>, K extends keyof T>(
+function getPropertyValue<T extends Record<string, Object>, K extends keyof T>(
   obj: T,
   key: K
 ): T[K] {

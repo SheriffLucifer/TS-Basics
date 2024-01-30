@@ -23,7 +23,12 @@ interface IKitchen {
 // будут присутствовать все свойства IKitchen за
 // исключением тех, которые есть в IRoom
 
-type KitchenDataType = Pick<
-  IKitchen,
-  "chairsCount" | "stoveType" | "hasPlants"
->;
+type KitchenDataType = Omit<IKitchen, keyof IRoom>;
+
+const kitchenData: KitchenDataType = {
+  chairsCount: 4,
+  hasPlants: true,
+  stoveType: stoveType.electro,
+};
+
+console.log(kitchenData);
