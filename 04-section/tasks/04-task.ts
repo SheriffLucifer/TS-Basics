@@ -12,7 +12,7 @@ interface IUser {
 // совпадают. Укажите типы полей.
 
 interface IRatingUserItem {
-  position: number;
-  login: string;
-  rating: number;
+  position: IUser["id"];
+  login: IUser["login"];
+  rating: IUser["rating"];
 }

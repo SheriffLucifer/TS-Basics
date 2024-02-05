@@ -3,11 +3,9 @@
 // один раз. А ownerName было опциональным
 
 interface ICar {
-  brand: string;
-  model: string;
+  readonly brand: string;
+  readonly model: string;
   hp: number;
   registrationNumber: string;
   ownerName?: string;
 }
-
-type UniqueCar = Record<string, Record<string, ICar>>;
